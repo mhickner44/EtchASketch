@@ -1,4 +1,29 @@
-.body {
+html{
+  height: 100%;
+
+}
+body {
+display:flex;
+align-content: center;
+justify-content: center;
+margin: 0;
+
+}
+
+.options{
+  display: flex;
+ flex-direction:column;
+  height: 400px;
+  align-content: space-between;
+  justify-content: space-evenly;
+
+}
+
+.sketchPad{
+  display: inline-block;
+  width: 500px;
+  height: 500px;
+  margin-right: 0%;
 }
 
 .pad {
@@ -8,6 +33,7 @@
   display: grid;
   grid-template-rows: repeat(16, 1fr);
   grid-template-columns: repeat(16, 1fr);
+
 }
 
 .block {

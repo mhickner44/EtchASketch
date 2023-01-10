@@ -1,20 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Etch A Sketch</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
-</head>
-<!-- stops from dragging the block elements and casuing  -->
-<BODY ondragstart="return false;" ondrop="return false;">
-    <div class="pad">
-        <!-- make the grid here -->
- 
-
+  </head>
+  <!-- stops from dragging the block elements and casuing  -->
+  <body ondragstart="return false;" ondrop="return false;">
+    <div class="options">
+      <input class="btn" type="color" id="colopicker" />
+      <button class="btn" id="RGB">RGB</button>
+      <button class="btn" id="eraser">Eraser</button>
+      <button class="btn" id="clear">Clear</button>
     </div>
-    <input class="slider" type="range" min="1" max="100" value="16" oninput="this.nextElementSibling.value = this.value">
-    <output>24</output>
-</body>
+
+    <div class="sketchPad">
+      <div class="pad">
+        <!-- make the grid here -->
+      </div>
+      <input
+        class="slider"
+        type="range"
+        min="1"
+        max="100"
+        value="16"
+        oninput="this.nextElementSibling.value = this.value+'x'+this.value"
+      />
+      <output>16 x 16</output>
+    </div>
+  </body>
 </html>
