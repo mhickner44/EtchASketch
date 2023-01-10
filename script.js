@@ -1,17 +1,17 @@
 const pad = document.querySelector(".pad");
 const slider = document.querySelector(".slider");
+let mouseDown = false;
 
 
 let gridSize = 16;
+
+//
 
 
 
 function drawGrid() {
     gridSize = slider.value;
-    //get the value that grid template repeat is at and then change it 
-    //this will change from a slider 
-
-    //del all the elements out of the grid
+    
     pad.innerHTML = '';
     pad.style.cssText = `grid-template-rows:repeat(${gridSize},1fr);grid-template-columns:repeat(${gridSize},1fr);`
 
@@ -21,16 +21,37 @@ function drawGrid() {
         const block = document.createElement("div");
         pad.appendChild(block);
         block.classList.add("block");
-        block.addEventListener("mousedown", event => { block.classList.add("selected") });
+        
+        block.addEventListener("mouseover", event => {
+            if (mouseDown) {
+                block.classList.add("selected")
+
+            }
+        }
+        );
+
     }
-    
-
-
 }
 
 
 
-//inital grid draw not giving it the event listener right now though
+/////mouse down check 
+document.body.onmousedown = function () {
+    mouseDown = true;
+}
+//check too see if mouse leaves the element
+pad.addEventListener("mouseleave", function (event) {
+    mouseDown = false;
+});
+
+document.body.onmouseup = function () {
+    mouseDown = false;
+}
+
+
+
+
+//decide between input and change
 drawGrid();
 slider.addEventListener("change", drawGrid);
 
