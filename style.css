@@ -1,49 +1,91 @@
-html{
+html {
   height: 100%;
-
+}
+@font-face {
+  font-family: "optirondo-boldbold";
+  src: url("fonts/optirondo.etf");
+  src: url("fonts/optirondo.woff") format("woff"),
+    url("fonts/optirondo.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
 }
 body {
-display:flex;
-align-content: center;
-justify-content: center;
-margin: 0;
+}
+.EtchASketch {
+  background-color: red;
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  border-radius: 3%;
 
 }
 
-.options{
+h1 {
+  font-family: "optirondo-boldbold";
+
+  color: goldenrod;
+}
+#title {
+ font-size: x-large;
+font-family: sans-serif;
+font-style: normal;
+font-weight: normal;
+}
+.dots {
+  background-color: white;
+  height: 100px;
+  width: 100px;
+
+  border-radius: 50%;
+  display: inline-block;
+}
+.bottom {
+  /* space the to wheels to the edges  */
+  width: 920px;
   display: flex;
- flex-direction:column;
-  height: 400px;
+  justify-content: space-between;
+
+  padding: 20px;
+}
+
+.options {
+  display: flex;
   align-content: space-between;
   justify-content: space-evenly;
-
 }
 
-.sketchPad{
+.sketchPad {
   display: inline-block;
-  width: 500px;
-  height: 500px;
-  margin-right: 0%;
+  width: fit-content;
+  height: fit-content;
+  background-color: lightgray;
+  border-radius: 3%;
+  border-style: solid;
+  border-color: lightgray;
+  background-clip: padding-box;
+  padding: 5px;
 }
 
 .pad {
-  width: 500px;
+  width: 700px;
   height: 500px;
-  border-style: solid;
+
   display: grid;
   grid-template-rows: repeat(16, 1fr);
   grid-template-columns: repeat(16, 1fr);
-
 }
 
 .block {
-  background-color: red;
- 
- 
+  background-color: lightgray;
 }
 
-
-.block.selected{
+.block.selected {
   background-color: white;
-  
+}
+
+.btn {
 }
