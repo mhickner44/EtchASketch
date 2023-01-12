@@ -27,19 +27,20 @@
 
 
     <div class="options">
-      <input class="btn" type="color" id="colopicker" />
+      <input class="picker" type="color" id="colopicker" />
       <button class="btn" id="RGB">RGB</button>
       <button class="btn" id="eraser">Eraser</button>
       <button class="btn" id="clear">Clear</button>
       <input
         class="slider"
         type="range"
-        min="1"
+        min="16"
         max="100"
         value="16"
         oninput="this.nextElementSibling.value = this.value+'x'+this.value"
+        
       />
-      <output>16 x 16</output>
+      <output id="slideValue">16 x 16</output>
     </div>
   </body>
 </html>

@@ -9,8 +9,12 @@ html {
   font-weight: normal;
   font-style: normal;
 }
+
 body {
+  font-family: "optirondo-boldbold";
+  background-color: black;
 }
+
 .EtchASketch {
   background-color: red;
   width: fit-content;
@@ -21,19 +25,16 @@ body {
   justify-content: center;
   margin: 0 auto;
   border-radius: 3%;
-
 }
 
 h1 {
-  font-family: "optirondo-boldbold";
-
   color: goldenrod;
 }
 #title {
- font-size: x-large;
-font-family: sans-serif;
-font-style: normal;
-font-weight: normal;
+  font-size: x-large;
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: normal;
 }
 .dots {
   background-color: white;
@@ -50,12 +51,6 @@ font-weight: normal;
   justify-content: space-between;
 
   padding: 20px;
-}
-
-.options {
-  display: flex;
-  align-content: space-between;
-  justify-content: space-evenly;
 }
 
 .sketchPad {
@@ -87,5 +82,38 @@ font-weight: normal;
   background-color: white;
 }
 
+.options {
+  display: flex;
+  align-content: center;
+  justify-content: space-evenly;
+  margin: 10% 10%;
+}
+
+#slideValue {
+  font-size: x-large;
+  padding: 15px;
+  color: lightgray;
+}
+
+
 .btn {
+  background-color: lightgray;
+  color: goldenrod;
+  font-family: "ptirondo-boldbold";
+  padding: 15px 30px;
+  font-size: large;
+  font-weight: bold;
+
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 30%;
+  border-color: lightgray;
+}
+
+.picker {
+  background-color: lightgray;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 30%;
+  border-color: lightgrey;
 }
