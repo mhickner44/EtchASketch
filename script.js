@@ -4,13 +4,10 @@ const clear = document.getElementById("clear");
 const picker = document.getElementById("colorPicker");
 const rgb = document.getElementById("RGB");
 const eraser = document.getElementById("eraser");
-
+const options= document.querySelectorAll(".btn");
 
 let colorValue = "white";
-
 let mouseDown = false;
-
-
 let gridSize = 16;
 
 
@@ -88,6 +85,20 @@ function rgbColor() {
 
 }
 
+//applying the outlined option
+console.log(options);
+
+options.forEach(item => {item.addEventListener("click",selectedTool)});
+
+function selectedTool(){
+    //check which button got clicked and remove it from the other button 
+    let current =this;
+       current.classList.add("selected");
+        //
+        options.forEach(item=> {if(item!=current){
+            item.classList.remove("selected");
+        }})
+}
 
 
 //decide between input and change
@@ -97,7 +108,8 @@ slider.addEventListener("change", drawGrid);
 //color  choices
 clear.addEventListener("click", drawGrid);
 rgb.addEventListener("click", rainbow);
-picker.addEventListener("change", changeColor);
+picker.addEventListener("click", changeColor);
+picker.addEventListener("input", changeColor);
 eraser.addEventListener("click", eraserColor);
 
 
